@@ -17,5 +17,6 @@ class Actor < ActiveRecord::Base
     Character.all.collect do |character|
       binding.pry
       "#{character.name} always says: #{character.catchphrase}"
+    end
   end
 end
