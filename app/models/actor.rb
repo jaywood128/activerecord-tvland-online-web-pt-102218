@@ -13,7 +13,8 @@ class Actor < ActiveRecord::Base
     end
   end
 
-  def catchphrase
-    binding.pry
+  def say_that_thing_you_say
+    Character.all.collect do |character|
+      "#{character.name} always says: #{character.catchphrase}"
   end
 end
