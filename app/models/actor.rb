@@ -12,11 +12,4 @@ class Actor < ActiveRecord::Base
       "#{character.name} - #{character.show.name}"
     end
   end
-
-  def say_that_thing_you_say
-    Character.all.collect do |character|
-      binding.pry
-      "#{character.name} always says: #{character.catchphrase}"
-    end
-  end
 end
