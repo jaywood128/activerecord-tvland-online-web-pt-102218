@@ -15,6 +15,7 @@ class Actor < ActiveRecord::Base
 
   def say_that_thing_you_say
     Character.all.collect do |character|
+      binding.pry
       "#{character.name} always says: #{character.catchphrase}"
   end
 end
